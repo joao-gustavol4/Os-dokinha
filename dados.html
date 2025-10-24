@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar-se | ShieldNet</title>
+    <link rel="stylesheet" href="dados.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Fundo azul -->
+        <div class="fundo"></div>
+
+        <!-- Retângulo branco -->
+        <div class="caixa-formulario">
+            <h1 class="titulo">DADOS PESSOAIS</h1>
+
+            <form class="formulario">
+                <label for="email" class="label">E-mail</label>
+                <input type="email" id="email" name="email" class="input" placeholder="Seu e-mail">
+
+                <label for="senha" class="label">Senha</label>
+                <input type="password" id="senha" name="senha" class="input" placeholder="Sua senha">
+
+                <label for="nome" class="label">Nome</label>
+                <input type="text" id="nome" name="nome" class="input" placeholder="Seu nome">
+
+                <label for="sobrenome" class="label">Sobrenome</label>
+                <input type="text" id="sobrenome" name="sobrenome" class="input" placeholder="Seu sobrenome">
+
+                <!-- CB -->
+                <div class="opcoes">
+                    <label class="checkbox">
+                        <input type="checkbox" name="novidades">
+                        Desejo receber informação sobre as novidades de ShieldNet no meu e-mail
+                    </label>
+
+                    <label class="checkbox">
+                        <input type="checkbox" name="politica" required>
+                        Li e entendi a Política de Privacidade e Cookies
+                    </label>
+                </div>
+
+                <!-- Botão -->
+                <button type="submit" class="botao">CRIAR CONTA</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

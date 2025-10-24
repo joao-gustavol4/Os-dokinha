@@ -1,0 +1,147 @@
+/* ======== ESTILO GERAL ======== */
+body {
+    margin: 0;
+    font-family: 'Lora', serif;
+    background-color: #120F62;
+    color: #F9F8F8;
+}
+
+/* Container central */
+.container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 100px 0;
+}
+
+/* Fundo azul */
+.fundo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #120F62;
+    z-index: -1;
+}
+
+/* ======== CAIXA BRANCA ======== */
+.caixa-formulario {
+    background-color: #FFFFFF;
+    border: 1px solid #000;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 1200px;
+    padding: 80px;
+    box-sizing: border-box;
+    color: #000000;
+}
+
+/* ======== TÍTULO ======== */
+.titulo {
+    font-size: 64px;
+    font-weight: 400;
+    color: #120F62;
+    margin-bottom: 60px;
+    text-align: left;
+}
+
+/* ======== FORMULÁRIO ======== */
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Labels */
+.label {
+    font-size: 36px;
+    color: #656565;
+}
+
+/* Inputs */
+.input {
+    width: 100%;
+    height: 60px;
+    font-size: 24px;
+    padding: 10px 15px;
+    border: none;
+    border-bottom: 2px solid #120F62;
+    background: transparent;
+    color: #120F62;
+    outline: none;
+}
+
+.input::placeholder {
+    color: #999;
+}
+
+/* Checkboxes */
+.opcoes {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.checkbox {
+    font-size: 24px;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox input {
+    width: 22px;
+    height: 22px;
+    accent-color: #120F62;
+}
+
+/* Botão */
+.botao {
+    margin-top: 60px;
+    width: 300px;
+    height: 80px;
+    font-size: 36px;
+    color: #000;
+    background-color: #FFF;
+    border: 2px solid #000;
+    cursor: pointer;
+    transition: 0.3s;
+    align-self: flex-start;
+}
+
+.botao:hover {
+    background-color: #120F62;
+    color: #FFF;
+    transform: scale(1.05);
+}
+
+/* ======== RESPONSIVIDADE ======== */
+@media (max-width: 768px) {
+    .caixa-formulario {
+        padding: 40px 30px;
+        width: 90%;
+    }
+
+    .titulo {
+        font-size: 42px;
+    }
+
+    .label {
+        font-size: 28px;
+    }
+
+    .input {
+        font-size: 20px;
+    }
+
+    .botao {
+        width: 100%;
+        font-size: 28px;
+    }
+}
