@@ -18,12 +18,15 @@ body{
     display: flex;
     justify-content: center;
     font-weight: 100;
+    position: relative;
+    top: 20px;
+    
 }
 .comentario{
     max-width: 1000px;
     width: 80%;
     text-align: center;
-    padding: 200px 40px;
+    padding: 100px 40px;
     box-shadow: 0 4px 10px #524d4d3b;
     background: #1d1c1cb7;
     margin: 40px auto;
@@ -32,25 +35,76 @@ body{
 #comenta{
     color: aliceblue;
     position: relative;
-    top: -180px;
+    top: -80px;
 }
 label{
     display: flex;
     position: relative;
-    top: 50px;
+    top: -50px;
     transform: translateX(250px);
     color: aliceblue;
+
 }
-#comentario{
+
+
+
+.quadrado {
+    width: 80%; 
+    max-width: 500px; 
+    height: 150px; 
+    max-height: 150px;
+    padding: 15px;
+    border-radius: 15px;
+    color: white;
+    background: rgba(0, 0, 0, 0.308);
+    border: 2px solid #5e4bbd;
+    font-size: 1.2rem;
+    top: 0px;
     position: relative;
-    top:100px;
-    display: flex;
-    transform: translateX(-30px);
-    padding: 20px 200px;
-    border-radius: 40px;
-    align-items: center;
-    margin: 0 auto;
 }
-textarea #placeholder{
-    position: absolute;
+button{
+    position: relative;
+    top: 50px;
+    border-radius: 30px;
+    padding: 20px 40px;
+    background: linear-gradient( #36184B 0%,#120F62 100% );
+    color: antiquewhite;
+    cursor: pointer;
+    border: none;
+}
+.container {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+.resposta {
+    width: 250px; 
+    padding: 10px 10px;
+    background-color: rgba(240, 248, 255, 0.411);
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+img{
+    position: relative;
+    top: -0px;
+    transform: translateX(-80px);
+    border-radius: 400px;
+    width: 30px;
+    height: 30px;
+}
+.nome{
+    position: relative;
+    top: -40px;
+    transform: translateX(-10px);
+    color: aliceblue;
+}
+.fala{
+    font-size: 20px;
+    position: relative;
+    top: -30px;
+    transform: translateX(-10px);
+    color: rgba(240, 248, 255, 0.678);
 }
