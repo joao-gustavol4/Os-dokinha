@@ -7,7 +7,7 @@
 
 
 body{
-    background: linear-gradient(90deg, #000000, #120F62);
+    background: linear-gradient(90deg, #120F62, #b3b3b3);
     margin: 0; 
     text-align: center;
     font-family: "Poppins", sans-serif;      
@@ -21,12 +21,13 @@ body{
 header{
     width: 100%;
     height: 200px;
-    background: transparent;
+    background: linear-gradient(90deg, #000000, #120F62);
     padding-bottom: 1rem;
+    border-bottom: 20px solid #000;
 }
 
 .pergunta{
-    color: #fff;
+    color: #ffffff;
     font-size: 5rem;
     font-style: oblique;
 }
@@ -49,7 +50,7 @@ header{
 
 .opc:focus {
     transform: translateY(-3px);
-    background: linear-gradient(50deg, #ffffff, #120F62);
+    background: linear-gradient(50deg, #000000, #120F62);
     transition: 0.3s ease;
     border: none ;
     color: #ffffff;
@@ -63,24 +64,29 @@ header{
 
 #next{
     border-radius: 30px;
-    color: #fff;
     background: #120F62;
     border: none;
     width: 250px;
     height: 60px;
     font-size: 1.6rem;
     font-style: normal;
+    text-decoration: none;
 }
 
 #next:hover{
     transform: translateY(-3px);
     transition: 0.2s ease;
-    border: 2px solid #fff;
-    background: #fff;
+    border: none;
+    background: #afafaf;
     color: #000;
+    box-shadow: 0 0 8px 2px rgba(255, 255, 255, 0.4),
+                0 0 15px 4px rgba(255, 255, 255, 0.25);
 }
 
-
+a{
+    text-decoration: none;
+    color: #fff;
+}
 footer.prx {
     display: flex;
     justify-content: center;
@@ -88,3 +94,4 @@ footer.prx {
     margin-top: auto; 
     background: transparent; 
   }
+
