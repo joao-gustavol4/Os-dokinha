@@ -20,7 +20,8 @@ ul{
     text-decoration: none;
     list-style: none;
     gap: 30px;
-    font-size: 2.7rem; 
+    font-size: 2.7rem;
+    transform: translateX(-100px);
 }
 
 
@@ -28,7 +29,28 @@ ul{
     color: #fff;
     text-decoration: none;
     font-size: 1.7rem;
-    font-weight: 500;
+    font-weight: 600;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.lista a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 3px;
+    background-color: #293BC3;
+    transition: width 0.3s ease;
+}
+
+.lista a:hover {
+    color: #fff;
+}
+
+.lista a:hover::after {
+    width: 100%;
 }
 
 
@@ -113,7 +135,7 @@ nav {
     color: #293BC3;
 }
 
-img{
+.fotos{
     width: 500px;
     height: 500px;
     background: url(OIP\ \(10\).webp);
@@ -243,3 +265,109 @@ img{
 #azul{ color:#293BC3; }
 .icones i{ margin-left:12px; font-size:1.4rem; color:#fff; }
 
+.lista li:hover{
+    transform: translateY(-5px);
+    transition: 0.4s ease;
+}
+
+/* ===== Rodapé ===== */
+.footer {
+  background: linear-gradient(135deg, #0b0133, #1a0850);
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px 20px;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  z-index: 10;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto 30px;
+  text-align: left;
+  gap: 40px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-section h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  border-left: 4px solid #fff;
+  padding-left: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-size: 15px;
+}
+
+.footer-section ul li a:hover {
+  color: #fff;
+}
+
+.footer-section p {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin: 8px 0;
+}
+
+.footer-section i {
+  margin-right: 8px;
+  color: #5ea1ff;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 1.7rem;
+  margin-right: 15px;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #5ea1ff;
+  transform: scale(1.2);
+}
+
+.footer hr {
+  border: 0;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 30px auto;
+  width: 90%;
+}
+
+.footer-copy {
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+/* ===== Responsivo ===== */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-section {
+    margin-bottom: 25px;
+  }
+}
