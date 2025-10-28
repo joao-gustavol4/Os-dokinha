@@ -1,0 +1,227 @@
+:root {
+  --verde: #37EA27;
+  --azul: #273EA8;
+  --cinza-claro: #EDEDED;
+  --texto: #000;
+  --subtexto: #606060;
+}
+
+body {
+  font-family: 'Lora', serif;
+  margin: 0;
+  background: rgba(78, 11, 235, 0.85);
+  color: var(--texto);
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.cabecalho {
+  text-align: center;
+  padding: 80px 20px 40px;
+}
+.cabecalho .logo {
+  font-size: 100px;
+  color: var(--verde)
+}
+.cabecalho h1 {
+  font-size: 2.8rem;
+  margin: 20px 0 10px;
+}
+.cabecalho .descricao {
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+
+.estatisticas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 60px;
+}
+.card {
+  background: #fff;
+  border-radius: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 260px;
+  height: 200px;
+  text-align: center;
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.card .icone {
+  font-size: 70px;
+  color: var(--azul);
+  margin-bottom: 15px;
+}
+.card p {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.busca {
+  margin: 60px auto;
+  text-align: center;
+}
+.busca input {
+  width: 80%;
+  max-width: 900px;
+  height: 80px;
+  border: 2px solid var(--azul);
+  border-radius: 50px;
+  padding: 0 30px;
+  font-size: 1.3rem;
+  color: #656565;
+}
+
+.categorias {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 40px 0;
+}
+.categoria {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border: 1px solid #000;
+  border-radius: 25px;
+  background: #fff;
+  padding: 15px 35px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.categoria i {
+  font-size: 28px;
+}
+.categoria:hover,
+.categoria.ativa {
+  background: linear-gradient(#293BC3, #4859D9);
+  color: #fff;
+}
+
+.filtros {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  background: #7496D5;
+  border-radius: 60px;
+  padding: 20px 40px;
+  width: fit-content;
+  margin: 40px auto;
+}
+.filtro {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.filtro.ativo {
+  background: #fff;
+  color: #000;
+  border-radius: 50px;
+  padding: 10px 30px;
+}
+
+.conteudos {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-bottom: 80px;
+}
+.conteudo {
+  background: #fff;
+  border: 2px solid #000;
+  border-radius: 25px;
+  padding: 40px;
+  position: relative;
+  transition: box-shadow 0.3s ease;
+}
+.conteudo:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+.conteudo h2 {
+  font-size: 1.8rem;
+  margin-top: 40px;
+}
+.conteudo p {
+  font-size: 1.1rem;
+  color: var(--subtexto);
+  margin-top: 15px;
+}
+.icone-conteudo {
+  font-size: 64px;
+  color: var(--azul);
+}
+.nivel {
+  position: absolute;
+  right: 40px;
+  top: 40px;
+  background: var(--cinza-claro);
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+}
+.nivel.iniciante { border: 2px solid var(--verde); color: var(--verde); }
+.nivel.intermediario { border: 2px solid #4769A9; color: #4769A9; }
+.nivel.avancado { border: 2px solid #FF7700; color: #FF7700; }
+
+.tema {
+  display: inline-block;
+  margin-top: 20px;
+  border-radius: 25px;
+  padding: 10px 30px;
+  font-size: 1.1rem;
+  color: #fff;
+}
+.tema.verde { background: var(--verde); }
+.tema.azul { background: var(--azul); }
+
+.rodape {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+.rodape a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+.rodape a:hover {
+  color: var(--azul);
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+  .busca input {
+    width: 95%;
+    font-size: 1rem;
+  }
+  .categorias, .estatisticas {
+    flex-direction: column;
+    align-items: center;
+  }
+  .categoria, .card {
+    width: 90%;
+  }
+  .conteudo {
+    padding: 25px;
+  }
+  .conteudo h2 {
+    font-size: 1.5rem;
+  }
+}
